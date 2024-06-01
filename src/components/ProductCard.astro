@@ -1,0 +1,42 @@
+---
+import Star from "./icons/Star.astro";
+---
+
+<div class="py-5 flex gap-3">
+  <div class="md:w-52">
+    <img src="/img/product_card.png" class="w-full" alt="" />
+  </div>
+  <div id="info" class="w-full">
+    <div class="flex md:text-xl w-full justify-between">
+      <span class="">Clarifion Air Ionizer </span>
+      <div class="text-custom-blue flex items-center gap-2">
+        <span
+          id="old price"
+          class="text-gray-500 line-through text-xs md:text-xl">$180</span
+        >
+        <span class="text-sm md:text-2xl">$84</span>
+      </div>
+    </div>
+    <div id="stars" class="flex gap-1 py-1">
+      {
+        [...Array(5)].map((e, i) => (
+          <Star size="16px" key={i} color="#FBBC04" />
+        ))
+      }
+    </div>
+    <div id="stock" class="md:text-sm flex items-center gap-2">
+      <input
+        type="checkbox"
+        checked
+        class="appearance-none bg-[#E3EEFF] border-[4px] md:border-[6px] border-[#E3EEFF] checked:bg-custom-blue flex w-4 h-4 md:h-5 md:w-5 rounded-full"
+      />
+      <span class="text-gray-600">12 left in Stock</span>
+    </div>
+    <div id="description " class="my-2 text-xs md:text-sm">
+      Simply plug a Clarifion into any standard outlet and replace bulky,
+      expensive air purifiers with a simple.
+    </div>
+  </div>
+</div>
+
+<style></style>

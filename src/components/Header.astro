@@ -1,0 +1,37 @@
+---
+import Check from "./icons/Check.astro";
+import Hearth from "./icons/Hearth.astro";
+import Truck from "./icons/Truck.astro";
+
+const items = [
+  { Icon: Check, text: "30-DAY SATISFACTION GUARANTEE" },
+  { Icon: Truck, text: "FREE DELIVERY ON ORDERS OVER $40.00" },
+  { Icon: Hearth, text: "50.000+ HAPPY CUSTOMERS" },
+  { Icon: Check, text: "100% MONEY BACK GUARANTEE" },
+];
+---
+
+<header>
+  <section
+    class="w-full flex justify-between md:justify-around items-center h-12 px-6 md:px-36 bg-dark-blue"
+  >
+    <span class="text-white md:hidden"> &#60</span>
+    {
+      items.map(({ Icon, text }, index) => (
+        <div
+          class={` ${index != 0 ? "hidden" : "flex"}   md:flex text-white gap-1 items-center    `}
+        >
+          {<Icon size="16px" color="white" />}
+          <span class=" text-xs capitalize">{text}</span>
+        </div>
+      ))
+    }
+    <span class="text-white md:hidden"> &gt</span>
+  </section>
+  <section class="md:px-20 px-5 py-3 flex items-center justify-between">
+    <div id="logo" class="w-24 md:w-48">
+      <img src="/img/clarifion_logo.webp" class="w-full h-auto" alt="" />
+    </div>
+    <img src="/img/alliases.png" class="w-24 md:w-auto" alt="" />
+  </section>
+</header>

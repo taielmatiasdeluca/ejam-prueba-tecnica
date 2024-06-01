@@ -1,0 +1,37 @@
+---
+import Check from "./icons/Check.astro";
+import Star from "./icons/Star.astro";
+
+const starcount = 5;
+---
+
+<div class="rounded-lg overflow-hidden bg-white w-full">
+  <div id="profile" class="p-5">
+    <header>
+      <div class="flex gap-2">
+        <img src="/img/profile.png" class="w-12 h-12 rounded-full" alt="" />
+        <div class="flex flex-col justify-center">
+          <div id="stars" class="flex gap-1">
+            {
+              [...Array(starcount)].map((e, i) => (
+                <Star size="12px" key={i} color="#FBBC04" />
+              ))
+            }
+          </div>
+          <div class="flex items-center gap-2">
+            <span>Ken T.</span>
+            <div class="flex items-center gap-2">
+              <Check size="18px" color="green" />
+              <span class="text-green-800">Verified Customer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="body" class="py-3">
+      “As soon as the Clarifions arrived I put one in my bedroom. This was late
+      in the afternoon. When I went to the bedroom in the evening it smelled
+      clean. When I went to bed I felt I could breathe better. Wonderful.”
+    </div>
+  </div>
+</div>

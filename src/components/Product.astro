@@ -1,0 +1,32 @@
+---
+import Customer from "./Customer.astro";
+import Good from "./Good.astro";
+import Opportunity from "./Opportunity.astro";
+import ProductCard from "./ProductCard.astro";
+import Shipping from "./Shipping.astro";
+---
+
+<div class="w-full p-2 md:p-16">
+  <section
+    id="Product"
+    class="w-full flex p-2 md:p-8 gap-3 rounded-lg bg-light-gray"
+  >
+    <div id="left " class="hidden md:flex flex-col gap-3 w-1/2">
+      <div class="rounded-lg overflow-hidden">
+        <img src="/img/product.png" class="w-full" alt="" />
+      </div>
+      <Customer />
+    </div>
+    <div id="right" class="w-1/2 grow p-2 md:px-10 h-full">
+      <div class="text-2xl text-center md:text-left md:text-3xl">
+        <span class="text-custom-blue">ONE TIME ONLY</span> special price for 6 extra
+        Clarifion for only <span class="text-custom-blue">$14 Each</span> ($84.00
+        total!)
+      </div>
+      <ProductCard />
+      <Good />
+      <Opportunity />
+      <Shipping />
+    </div>
+  </section>
+</div>
