@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Astro Starter Kit: Basics
 
 ```sh
@@ -52,3 +53,7 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+=======
+# ejam-prueba-tecnica
+Esta es una prueba tecnica, en la cual se me pidio recrear un projecto de figma, con cualquier tegnologia o stack, la web es reponsive.
+>>>>>>> f33bb17a05fb60acc7f06b8f0564ab37f27e339f
